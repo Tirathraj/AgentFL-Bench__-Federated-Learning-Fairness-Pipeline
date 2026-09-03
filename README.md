@@ -418,31 +418,11 @@ Before using the Streamlit application with the current Layers 1--3, synchronize
 - Corrective actions require explicit human approval.
 - Benchmark answers must be grounded in tool outputs rather than invented metrics.
 
-## Generated files and Git
-
-Generated experiment outputs should normally not be committed. A useful `.gitignore` entry is:
-
-```gitignore
-__pycache__/
-*.pyc
-results/
-outputs/
-```
-
-The benchmark definition and frozen context should remain versioned when they are part of an experiment release:
-
-```text
-benchmark.jsonl
-benchmark_context.json
-```
-
 ## Scope
 
 The current implementation is a controlled research benchmark rather than a clinical decision-support product. The second hospital is counterfactually simulated from a disjoint subset of the Sainte-Justine cohort, and fairness is evaluated using model-error disparities rather than clinical-outcome fairness. The system should not be interpreted as establishing clinical safety or clinical effectiveness.
 
 ## Citation
-
-If this repository accompanies a paper, add the final BibTeX citation here after publication:
 
 ```bibtex
 @inproceedings{agentflbench2026,
